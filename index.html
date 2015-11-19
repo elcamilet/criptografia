@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Criptografia</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="criptografia.css">
+    <script type="text/javascript" src="criptografia.js"></script>
+</head>
+<body>
+    <br>
+    <b><h1>Criptografia</h1>Per Julia Igual Nevot</b><br><br>
+    <div id="contenedor">
+	    <form name="formulari" id="formulari">
+			<div id="un">
+			    <b>Càlcul de claus</b><br><br>
+			    <div class="in">
+				    1.- Escull dos nombres primers: <select id="llista_primers"></select>
+				    i <select id="llista_primers_2"></select><br>
+				    <!--Escull un altre numero: <input name="cu" type="text" value=""><br>-->
+				    2.- Calcula el mòdul: <input onclick="calcula_modul()" type="button" value="Calcula mòdul"><br>
+				    <input name="euler" type="hidden">
+				    3.- Escull l'exponent de la teva clau pública <select id="exponent_public"></select><br>
+				    4.- Calcula les claus amb Bezout: <input onclick="bezout(document.formulari.exponent_public.value,document.formulari.euler.value)" type="button" value="Bezout"><br>
+			    </div>
+			    <div class="out" id="unout"></div>
+			</div>
+		    <br><hr><br>
+			<div id="dos">
+			    <b>Encripta un text</b><br><br>
+			    <div class="in">
+				    Clau pública: <input name="clau_publica" id="clau_publica" type="text" value=""><br>
+				    Mòdul: <input name="modul" id="modul" type="text" value=""><br>
+				    Frase a encriptar: <input name="frase" type="text" value=""><br>
+				    <input onclick="codifica(document.formulari.frase.value)" type="button" value="Encripta"><br>
+			    </div>
+			    <div class="out" id="dosout"></div><br>
+			    <div class="in2">
+            Frase Encriptada: <br>
+            <input type="button" value="Copia per desencriptar" onClick="copia_a_desencriptar(document.getElementById('dosoutbis').textContent)">
+          </div>
+          <div class="out2" id="dosoutbis"></div><br>
+			</div><br>
+		    <br><hr><br>
+			<div id="tres">
+			    <b>Desencripta un codi</b><br><br>
+			    <div class="in">
+				    Clau privada: <input name="clau_privada" id="clau_privada" type="text" value=""><br>
+				    Mòdul: <input name="modul_2" id="modul_2" type="text" value=""><br>
+				    Codi a desencriptar: <input name="frase_xifrada" id="frase_xifrada" type="text" value=""><br>
+				    <input onclick="descodifica(document.formulari.frase_xifrada.value)" type="button" value="Desencripta"><br>
+			    </div>
+			    <div class="out" id="tresout"></div>
+			    <div class="in2">Frase Desencriptada: </div><div class="out2" id="tresoutbis"></div><br>
+			    <br>
+			</div><br>
+      <br><hr><br>
+
+      <input type="button" onCLick="location.reload()" value="Neteja el formulari">
+	    </form>
+    </div>
+</body>
+</html>

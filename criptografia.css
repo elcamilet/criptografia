@@ -1,0 +1,16 @@
+
+body { font-family: sans-serif; font-size: small; text-align:center; background-color: #fdfdfd;}
+input, select{ color: #333; border: 1px solid #666; padding: 4px; background-color: #eee; margin: 1px;}
+input:hover {background-color: #ccc;}
+hr {background-color: #666; width: 100%; border: 1px solid #666; }
+
+#contenedor{ width: 800px; height: auto; margin-right: auto; margin-left: auto;
+    border: 2px solid #666; padding: 10px; background-color: #fff;}
+#un, #dos, #tres {width: 780px; padding: 2px;}
+#un{height: 180px;}
+#dos, #tres {height: 200px;}
+.in{ width: 350px; float: left; height: 150px; text-align: right; }
+.in2{ width: 350px; float: left; height: 20px; text-align: right; margin: 3px;}
+.out{width: 420px; float: right; border: 1px solid #aaa; height: 150px; overflow: auto; margin: 1px;}
+.out2{width: 420px; float: right; border: 1px solid #aaa; height: 40px; overflow: auto; margin: 1px;}
+
